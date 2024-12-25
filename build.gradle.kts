@@ -21,7 +21,8 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator:3.4.1")
-
+	implementation("org.springframework.boot:spring-boot-starter-validation:3.4.1")
+	implementation("jakarta.validation:jakarta.validation-api:3.1.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.postgresql:postgresql:42.7.4")
 	implementation("org.springframework.boot:spring-boot-starter-web")
