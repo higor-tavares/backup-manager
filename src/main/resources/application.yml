@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: backup-manager
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/postgres}
+    username: ${DB_USR:postgres}
+    password: ${DB_PASSWD:example}
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
