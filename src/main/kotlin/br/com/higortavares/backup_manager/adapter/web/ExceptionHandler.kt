@@ -1,6 +1,6 @@
 package br.com.higortavares.backup_manager.adapter.web
 
-import org.postgresql.util.PSQLException
+import br.com.higortavares.backup_manager.domain.error.UserAlreadyExistsException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.FieldError
@@ -27,7 +27,7 @@ class ExceptionHandler {
     }
 
     @ExceptionHandler
-    fun handleUserAlreadyExists(ex: PSQLException): ResponseEntity<String> {
-        return ResponseEntity.status(HttpStatus.CONFLICT).body("User already exits")
+    fun handleUserAlreadyExists(ex: UserAlreadyExistsException): ResponseEntity<String> {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.message)
     }
 }
