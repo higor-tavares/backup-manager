@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository
 import java.util.UUID;
 
 @Repository
-interface  UserRepository: JpaRepository<br.com.higortavares.backup_manager.adapter.persistence.UserEntity, UUID>{
+interface  UserRepository: JpaRepository<UserEntity, UUID>{
 }
